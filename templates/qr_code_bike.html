@@ -1,0 +1,8 @@
+{% extends "base_generic.html" %}
+
+{% load qr_code %}
+
+{% block content %}
+    {% qr_from_text bike size="10" error_correction='h' %}
+
+{% endblock %}

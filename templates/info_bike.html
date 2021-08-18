@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>SANGAL BIKES</h1>
+    <h2>Informações da Bicileta:</h2>
+    <p><strong>Número Quadro:</strong><a>{{ bike.nquadro }}</a></p>
+    <p><strong>Ordem:</strong> <a href="">{{ bike.ordem }}</a></p> <!-- author detail link not yet defined -->
+    <p><strong>Marca:</strong> {{ bike.marca }}</p>
+    <p><strong>Modelo:</strong> {{ bike.modelo}}</p>
+    <p><strong>Número do Display:</strong> {{ bike.ndisplay}}</p>
+    <p><strong>Numero do Motor:</strong> {{ bike.nmotor}}</p>
+    <p><strong>Linha:</strong> {{ bike.linha}}</p>
+    <p><strong>Travão Frente:</strong> {{ bike.get_travaofrente_display}}</p>
+    <p><strong>Travão Tras:</strong> {{ bike.get_travaotras_display}}</p>
+    <p><strong>Mudança:</strong> {{ bike.get_mudanca_display}}</p>
+    <p><a href="{% url 'qr_code_bike' bike.pk %}">Ver QR-CODE</a></p>
+
+{% endblock %}
